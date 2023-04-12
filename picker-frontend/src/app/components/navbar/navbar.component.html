@@ -1,0 +1,18 @@
+<div class="navbar">
+    <div class="sections">
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+        <a routerLink="/about" routerLinkActive="active">Team</a>
+        <a routerLink="/projects" routerLinkActive="active">Services</a>
+        <a routerLink="/contact" routerLinkActive="active">Contact</a>
+        <i class="menu pi pi-bars" (click)="openSidebar()"></i>
+    </div>
+    <p-divider></p-divider>
+</div>
+<p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000">
+    <div class="sidebar">
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+        <a routerLink="/about" routerLinkActive="active">Team</a>
+        <a routerLink="/projects" routerLinkActive="active">Services</a>
+        <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </div>
+</p-sidebar>
