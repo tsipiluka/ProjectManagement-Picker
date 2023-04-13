@@ -15,6 +15,7 @@ import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
 import { CarouselModule } from 'primeng/carousel';
 import { QuestionBlockComponent } from './components/question-block/question-block.component';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, QuestionBlockComponent],
@@ -29,6 +30,7 @@ import { QuestionBlockComponent } from './components/question-block/question-blo
     SidebarModule,
     BrowserAnimationsModule,
     CarouselModule,
+    InputNumberModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
