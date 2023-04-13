@@ -38,6 +38,10 @@
     display: none;
 }
 
+.sections i {
+    margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 768px) {
     .sections a {
         display: none;
