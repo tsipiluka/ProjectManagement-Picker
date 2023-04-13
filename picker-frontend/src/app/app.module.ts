@@ -14,9 +14,10 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
 import { CarouselModule } from 'primeng/carousel';
+import { QuestionBlockComponent } from './components/question-block/question-block.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent],
+  declarations: [AppComponent, NavbarComponent, QuestionBlockComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
