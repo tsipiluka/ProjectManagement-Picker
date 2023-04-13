@@ -52,5 +52,5 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            docker pull ghcr.io/tsipiluka/ProjectManagement-Picker:main
-            docker run -it -p 2020:2020 -d --network=traefik_web --name project-picker ghcr.io/tsipiluka/ProjectManagement-Picker:main
+            docker pull ghcr.io/tsipiluka/projectmanagement-picker:main
+            docker run -it -p 2020:2020 -d --network=traefik_web --name project-picker ghcr.io/tsipiluka/projectmanagement-picker:main
