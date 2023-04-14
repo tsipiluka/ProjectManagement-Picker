@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "question": "Does the project require a high involvement of the customer?",
+        "questiontype": "choose",
+        "answers": [
+            {
+                "answer": "High Involvement",
+                "info": "The customer is heavily involved in the project and significantly influences its implementation and outcome through continuous feedback",
+                "weights": [0,0,2,4,5]
+            },
+            {
+                "answer": "Medium Involvement",
+                "info": "The customer is partially involved and provides input on important project decisions and milestones",
+                "weights": [1,1,3,4,3]
+            },
+            {
+                "answer": "Low Involvement",
+                "info": "The customer is only involved at the beginning and at the end of the project",
+                "weights": [5,5,4,3,3]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "question": "Should changes to the product be possible during the project?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "yes",
+                "info": "Changes to the product are allowed during the project, which allows for flexibility and adaptation to changing circumstances or customer needs.",
+                "weights": [0,0,2,4,5]
+            },
+            {
+                "answer": "no",
+                "info": "Changes to the product are not allowed during the project, which may limit flexibility but can also provide a more controlled approach to product development",
+                "weights": [5,5,4,0,0]
+            }
+        ]
+    }
+]
