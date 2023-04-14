@@ -26,7 +26,7 @@ export class QuestionBlockComponent {
     }
   }
 
-   laodQuestions() {
+  laodQuestions() {
     for (let i = 0; i < QuestionJson.length; i++) {
       var answers: IAnswer[] = []
       var weights: Map<number, number> = new Map<number, number>();
@@ -41,5 +41,11 @@ export class QuestionBlockComponent {
         console.log(this.questions[i])
       }
     }
-   }
+  }
+     
+  updateProjectMethods(weights: Map<number, number>) {
+    for (let i = 0; i < this.projectMethods.length; i++) {
+      this.projectMethods[i].value += weights.get(i)!;
+    }
+  }
 }
