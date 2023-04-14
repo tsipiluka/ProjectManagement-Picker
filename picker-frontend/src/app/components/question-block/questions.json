@@ -1,40 +1,429 @@
 [
     {
         "id": 1,
+        "question": "Should changes to the product be possible during the project?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "yes",
+                "checked": false,
+                "info": "Changes to the product are allowed during the project, which allows for flexibility and adaptation to changing circumstances.",
+                "weights": [0,0,3,5,5]
+            },
+            {
+                "answer": "no",
+                "checked": false,
+                "info": "Changes to the product are not allowed during the project, which provide a more controlled approach to product development and requires a more detailed planning.",
+                "weights": [5,5,4,0,0]
+            }
+        ]
+    },
+    {
+        "id": 2,
         "question": "Does the project require a high involvement of the customer?",
         "questiontype": "choose",
         "answers": [
             {
                 "answer": "High Involvement",
+                "checked": false,
                 "info": "The customer is heavily involved in the project and significantly influences its implementation and outcome through continuous feedback",
-                "weights": [0,0,2,4,5]
+                "weights": [0,0,3,4,5]
             },
             {
                 "answer": "Medium Involvement",
-                "info": "The customer is partially involved and provides input on important project decisions and milestones",
-                "weights": [1,1,3,4,3]
+                "checked": false,
+                "info": "The customer is partially involved and provides input on important project decisions and milestones.",
+                "weights": [1,1,3,3,3]
             },
             {
                 "answer": "Low Involvement",
+                "checked": false,
                 "info": "The customer is only involved at the beginning and at the end of the project",
                 "weights": [5,5,4,3,3]
             }
         ]
     },
     {
-        "id": 2,
-        "question": "Should changes to the product be possible during the project?",
+        "id": 3,
+        "question": "Is flexibility important to you?",
         "questiontype": "yesno",
         "answers": [
             {
                 "answer": "yes",
-                "info": "Changes to the product are allowed during the project, which allows for flexibility and adaptation to changing circumstances or customer needs.",
-                "weights": [0,0,2,4,5]
+                "checked": false,
+                "info": "The project should be able to adapt to changing circumstances to be more efficient in finding e.g. new innovative solutions to problems or fullfill new requirements",
+                "weights": [0,0,3,5,5]
             },
             {
                 "answer": "no",
-                "info": "Changes to the product are not allowed during the project, which may limit flexibility but can also provide a more controlled approach to product development",
-                "weights": [5,5,4,0,0]
+                "checked": false,
+                "info": "The project should have a clear goal with a predefined scope and structur and should not be changed during the project",
+                "weights": [5,5,5,2,0]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "question": "Do you have a precise vision of the project’s goals?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "yes",
+                "checked": false,
+                "info": "There are clear goals and a specific vision of the project’s outcome which can be used to create a detailed plan",
+                "weights": [5,5,4,5,5]
+            },
+            {
+                "answer": "no",
+                "checked": false,
+                "info": "There are only vague ideas about the project’s goals and thus the outcome is not clear",
+                "weights": [0,0,1,3,2]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "question": "Should the method focus on costs and Ressources?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "yes",
+                "checked": false,
+                "info": "The available bugdet and the ressources should be cleared at the beginning of the project and the project should be planned accordingly",
+                "weights": [5,5,4,5,1]
+            },
+            {
+                "answer": "no",
+                "checked": false,
+                "info": "The project does not have a fixed budget and the ressources can be used flexibly",
+                "weights": [0,0,1,3,5]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "question": "Should the required resources be known before the project starts?",
+        "questiontype": "choose",
+        "answers": [
+            {
+                "answer": "Yes",
+                "checked": false,
+                "info": "Detailed plan of required ressources should be known and documented appropriately, no adjustments while the project progresses to avoid a over- or underestimating of the required ressources",
+                "weights": [5,5,5,2,0]
+            },
+            {
+                "answer": "Medium",
+                "checked": false,
+                "info": "Approximate ressources should be known, but may be adjusted as the project progresses",
+                "weights": [2,2,3,5,5]
+            },
+            {
+                "answer": "No",
+                "checked": false,
+                "info": "No Precise Information about required ressources are known before the project starts",
+                "weights": [0,0,0,5,5]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "question": "Do you have a fixed budget?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "Yes",
+                "checked": false,
+                "info": "The budget for the project is fixed and should not be exceeded",
+                "weights": [5,5,5,3,1]
+            },
+            {
+                "answer": "No",
+                "checked": false,
+                "info": "The budget for the project is not fixed and can be adjusted as the project progresses for example by adding new features",
+                "weights": [1,1,4,4,5]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "question": "Does the project has a fixed deadline?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "Yes",
+                "checked": false,
+                "info": "The deadline is fixed and should not be exceeded",
+                "weights": [5,5,4,2,1]
+            },
+            {
+                "answer": "No",
+                "checked": false,
+                "info": "The deadline is not fixed and can be adjusted as the project progresses",
+                "weights": [0,0,2,5,5]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "question": "When should your product (or prototypes) be delivered?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "Once at the Ende",
+                "checked": false,
+                "info": "The product should be delivered once at the end of the project",
+                "weights": [5,5,3,3,3]
+            },
+            {
+                "answer": "Constantly",
+                "checked": false,
+                "info": "Prototypes of the product should be delivered constantly during the project and in addition the final product at the end of the project",
+                "weights": [0,0,5,3,5]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "question": "How many persons are working on the project?",
+        "questiontype": "number",
+        "answers": [
+            {
+                "answer": "0 - 5",
+                "checked": false,
+                "info": "",
+                "weights": [0,0,0,4,0]
+            },
+            {
+                "answer": "5 - 10",
+                "checked": false,
+                "info": "",
+                "weights": [3,3,3,4,5]
+            },
+            {
+                "answer": "10 - 15",
+                "checked": false,
+                "info": "",
+                "weights": [4,4,4,4,3]
+            },
+            {
+                "answer": "> 15",
+                "checked": false,
+                "info": "",
+                "weights": [4,4,4,3,2]
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "question": "How important is communication within the project?",
+        "questiontype": "choose",
+        "answers": [
+            {
+                "answer": "High",
+                "checked": false,
+                "info": "The project requires a high level of communication between all involved person (e.g. daily meetings)",
+                "weights": [2,2,2,3,5]
+            },
+            {
+                "answer": "Medium",
+                "checked": false,
+                "info": "The project may require some meetings to make basic decisions. But most of the topics have been discussed in advance.",
+                "weights": [3,3,3,3,2]
+            },
+            {
+                "answer": "Low",
+                "checked": false,
+                "info": "Communication has a low priority or is difficult to implement.",
+                "weights": [4,4,4,1,0]
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "question": "How important is documentation within the project?",
+        "questiontype": "choose",
+        "answers": [
+            {
+                "answer": "High",
+                "checked": false,
+                "info": "Detailed documentation of the project is necessary.",
+                "weights": [5,5,5,1,1]
+            },
+            {
+                "answer": "Medium",
+                "checked": false,
+                "info": "The most important information of the project must be documented, although some details may be omitted.",
+                "weights": [3,3,3,5,5]
+            },
+            {
+                "answer": "Low",
+                "checked": false,
+                "info": "Only a basic documentation of the project is needed.",
+                "weights": [0,0,0,4,4]
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "question": "How long should the planning phase of the project be?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "Long",
+                "checked": false,
+                "info": "Detailed planning in advance is foreseen and planning may take place over a longer period of time (several weeks).",
+                "weights": [5,5,4,3,0]
+            },
+            {
+                "answer": "Medium",
+                "checked": false,
+                "info": "Only a short planning phase is needed (the focus is on getting started faster).",
+                "weights": [0,0,0,4,5]
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "question": "Should the project management method specify processes and roles or just provide a general guideline?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "Predefined",
+                "checked": false,
+                "info": "The method predefines a detailed specification on processes and roles.",
+                "weights": [5,5,4,1,5]
+            },
+            {
+                "answer": "Flexible Guideline",
+                "checked": false,
+                "info": "The method only provides a genaral guideline which can be customized individually to the project.",
+                "weights": [1,1,2,5,1]
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "question": "Does the project involve a high level of technical complexity?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "Yes",
+                "checked": false,
+                "info": "The project has very complex tasks that require a lot of expertise and a high level of effort.",
+                "weights": [3,5,5,4,5]
+            },
+            {
+                "answer": "No",
+                "checked": false,
+                "info": "The tasks and requirements of the project are kept low and simple.",
+                "weights": [5,4,5,5,5]
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "question": "How many stakeholders are involved in your project?",
+        "questiontype": "number",
+        "answers": [
+            {
+                "answer": "< 5",
+                "checked": false,
+                "info": "",
+                "weights": [5,3,3,5,5]
+            },
+            {
+                "answer": "5 - 10",
+                "checked": false,
+                "info": "",
+                "weights": [3,5,5,5,5]
+            },
+            {
+                "answer": "> 10",
+                "checked": false,
+                "info": "",
+                "weights": [1,3,3,3,3]
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "question": "Is the project exposed to high risks?",
+        "questiontype": "choose",
+        "answers": [
+            {
+                "answer": "Yes",
+                "checked": false,
+                "info": "There are risks that can put the project goals in danger.",
+                "weights": [0,1,5,4,4]
+            },
+            {
+                "answer": "Medium",
+                "checked": false,
+                "info": "The Risks don’t affect the project goals directly, but can cause difficulties such as delays.",
+                "weights": [1,2,5,5,5]
+            },
+            {
+                "answer": "No",
+                "checked": false,
+                "info": "There almost none known risks.",
+                "weights": [5,5,1,5,5]
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "question": "Is the project’s success heavily dependent on risk management and mitigation?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "Yes",
+                "checked": false,
+                "info": "",
+                "weights": [0,1,5,4,4]
+            },
+            {
+                "answer": "No",
+                "checked": false,
+                "info": "",
+                "weights": [5,5,2,5,5]
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "question": "Does your Team cover a wide range of expertise for the development?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "Yes",
+                "checked": false,
+                "info": "",
+                "weights": [4,4,5,5,5]
+            },
+            {
+                "answer": "No",
+                "checked": false,
+                "info": "",
+                "weights": [2,2,1,2,2]
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "question": "Is this a long-term project?",
+        "questiontype": "yesno",
+        "answers": [
+            {
+                "answer": "Yes",
+                "checked": false,
+                "info": "More than 6 months.",
+                "weights": [3,3,4,2,3]
+            },
+            {
+                "answer": "No",
+                "checked": false,
+                "info": "Less than 6 months.",
+                "weights": [4,4,2,4,4]
             }
         ]
     }
