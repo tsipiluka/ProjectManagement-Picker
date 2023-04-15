@@ -53,13 +53,14 @@
 
 .question-block .content .answers {
   margin-bottom: 30px;
+  width: 100%;
 }
 
 
 
 .question-block .content .answers .answer-label {
   margin-top: 10px;
-  width: 523px;
+
 }
 
 .title {
