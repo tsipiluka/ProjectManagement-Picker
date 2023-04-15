@@ -19,8 +19,17 @@
     margin-right: auto;
 }
 
-.question-block p {
+:host >>> .p-checkbox-label{
     font-family: 'Poppins', sans-serif;
+    color: rgb(0, 190, 199);
+}
+
+.question-block p, label {
+    font-family: 'Poppins', sans-serif;
+}
+
+.p-checkbox-label {
+  font-family: 'Poppins', sans-serif;
 }
 
 .title {
