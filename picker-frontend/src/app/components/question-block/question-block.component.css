@@ -42,3 +42,59 @@
     justify-content: space-between;
     width: 100%;
 }
+
+/* David */
+
+.podium {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+  }
+  
+  .place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 0;
+    padding-bottom: 20%;
+    background-color: #eee;
+    border: 2px solid #aaa;
+    position: relative;
+  }
+  
+  .place.first {
+    padding-bottom: 30%;
+  }
+  
+  .place.second {
+    padding-bottom: 25%;
+  }
+  
+  .place.third {
+    padding-bottom: 20%;
+  }
+  
+  .place.fourth {
+    padding-bottom: 15%;
+  }
+  
+  .place.fifth {
+    padding-bottom: 10%;
+  }
+  
+  .position {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+  }
+  
+  .name {
+    font-size: 18px;
+    position: absolute;
+    bottom: 10%;
+  }
