@@ -23,10 +23,11 @@ import { ProgressBarModule } from 'primeng/progressbar';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { PanelModule } from 'primeng/panel';
 import { ScrumInfoComponent } from './pages/scrum-info/scrum-info.component';
+import { PickerComponent } from './pages/picker/picker.component';
 
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, QuestionBlockComponent, ScrumInfoComponent],
+  declarations: [AppComponent, NavbarComponent, QuestionBlockComponent, ScrumInfoComponent, PickerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
