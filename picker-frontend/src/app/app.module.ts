@@ -22,10 +22,11 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { PanelModule } from 'primeng/panel';
+import { ScrumInfoComponent } from './pages/scrum-info/scrum-info.component';
 
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, QuestionBlockComponent],
+  declarations: [AppComponent, NavbarComponent, QuestionBlockComponent, ScrumInfoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
