@@ -16,6 +16,13 @@ import { SidebarModule } from 'primeng/sidebar';
 import { CarouselModule } from 'primeng/carousel';
 import { QuestionBlockComponent } from './components/question-block/question-block.component';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { FormsModule } from '@angular/forms';
+import { CheckboxModule } from 'primeng/checkbox';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { PanelModule } from 'primeng/panel';
+
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, QuestionBlockComponent],
@@ -31,6 +38,12 @@ import { InputNumberModule } from 'primeng/inputnumber';
     BrowserAnimationsModule,
     CarouselModule,
     InputNumberModule,
+    RadioButtonModule,
+    FormsModule,
+    CheckboxModule,
+    ProgressBarModule,
+    ConfirmDialogModule,
+    PanelModule
   ],
   providers: [],
   bootstrap: [AppComponent],
