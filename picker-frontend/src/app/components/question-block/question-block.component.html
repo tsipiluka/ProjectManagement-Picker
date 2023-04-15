@@ -3,18 +3,20 @@
         <p-progressBar [value]="getPercentageOfStage()"></p-progressBar>
     </div>
     <div class="question-block">
-        <p class="title">
-            {{getCurrentQuestion().question}}
-        </p>
-        <p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
-        <div *ngFor="let answer of this.getCurrentQuestion().answers" class="answers">
-            <p-checkbox label="{{answer.answer}}" value="{{answer.answer}}" [(ngModel)]="selectedAnswers"
-                (onChange)="changeBoolState(answer)"></p-checkbox>
-            <br>
-            <label>{{answer.info}}</label>
-            <br>
-            <br>
-            <br>
+        <div class="header">
+            <p class="title">
+                {{getCurrentQuestion().question}}
+            </p>
+        </div>
+        <div class="content">
+            <p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
+            <div *ngFor="let answer of this.getCurrentQuestion().answers" class="answers">
+                <p-checkbox label="{{answer.answer}}" value="{{answer.answer}}" [(ngModel)]="selectedAnswers"
+                    (onChange)="changeBoolState(answer)"></p-checkbox>
+                <div class="answer-label">
+                    <label>{{answer.info}}</label>
+                </div>
+            </div>
         </div>
         <div class="controls">
             <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" class="right"
