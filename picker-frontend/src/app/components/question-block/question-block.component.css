@@ -19,6 +19,7 @@
     margin-right: auto;
 }
 
+/*Change PrimeNG Style for Label Font*/
 :host >>> .p-checkbox-label{
     font-family: 'Poppins', sans-serif;
     color: rgb(0, 190, 199);
@@ -27,11 +28,14 @@
 .question-block p, label {
     font-family: 'Poppins', sans-serif;
 }
+
+/*Title Div in Question Block*/
 .question-block .header {
   width: 100%;
   height: 100px;
 }
 
+/*Content Div in Question Block*/
 .question-block .content {
   width: 100%;
   height: 500px;
@@ -41,7 +45,7 @@
   align-items: center;
 }
 
-
+/*Optional Design for centered answers - comment out for left aligned answers*/
 .question-block .content .answers {
   display: flex;
   flex-direction: column;
