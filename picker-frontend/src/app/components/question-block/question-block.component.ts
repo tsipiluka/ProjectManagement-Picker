@@ -5,6 +5,16 @@ import { IAnswer, Answer, IAnswerObject } from 'src/app/entities/answer';
 import { ProjectMethod } from 'src/app/entities/projectMethod';
 import { ConfirmationService } from 'primeng/api';
 
+export interface IColorizeAnswer {
+  method: string;
+  color: string;
+}
+
+export class ColorizeAnswer implements IColorizeAnswer {
+  constructor(public method: string,public color: string) {}
+}
+
+
 @Component({
   selector: 'app-question-block',
   templateUrl: './question-block.component.html',
@@ -75,10 +85,13 @@ export class QuestionBlockComponent {
   }
 
   nextQuestion() {
+    let counter = 0;
     for (let answer of this.getCurrentQuestion().answers ){
       if(answer.answer === this.selectedAnswers[0]){
+        this.getCurrentQuestion().answers[counter].checked = true;
         this.updateProjectMethods(answer.weights);
       }
+      counter++;
     }
     if ( this.questionCounter+1 === 10){
       this.confirmationService.confirm({
@@ -92,11 +105,6 @@ export class QuestionBlockComponent {
         reject: () => {
           this.sortProjectMethods()
           this.showResult = true;
-          document.getElementById("p1")!.style.height = "100%";
-          document.getElementById("p2")!.style.height = (100/this.projectMethods[0].value)*this.projectMethods[1].value + "%";
-          document.getElementById("p3")!.style.height = (100/this.projectMethods[0].value)*this.projectMethods[2].value + "%";
-          document.getElementById("p4")!.style.height = (100/this.projectMethods[0].value)*this.projectMethods[3].value + "%";
-          document.getElementById("p5")!.style.height = (100/this.projectMethods[0].value)*this.projectMethods[4].value + "%";
         }
     });
     }else{
@@ -116,4 +124,45 @@ export class QuestionBlockComponent {
     }
   }
 
+  getHighestProjectMethodOnGivenAnswer(answer: IAnswer) {
+    let highestProjectMethod: IColorizeAnswer[] = []
+    for (let i = 0; i < this.projectMethodNames.length; i++) {
+      highestProjectMethod.push(new ColorizeAnswer(this.projectMethodNames[i], this.setCorrectColor(answer.weights.get(i)!)!));
+    }
+
+    highestProjectMethod.sort((a, b) => {
+      if (a.color === b.color) {
+        return 0;
+      } else if (a.color === 'success') {
+        return -1;
+      } else if (b.color === 'success') {
+        return 1;
+      } else if (a.color === 'warning') {
+        return -1;
+      } else if (b.color === 'warning') {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+    return highestProjectMethod;
+  }
+
+  setCorrectColor(num: number) {
+    switch (num) {
+      case 0:
+        return "danger";
+      case 1:
+        return "danger";
+      case 2:
+        return "danger";
+      case 3:
+        return "warning";
+      case 4:
+        return "warning";
+      case 5:
+        return "success";
+    }
+    return "";
+  }
 }

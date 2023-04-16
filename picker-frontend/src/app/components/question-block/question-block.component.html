@@ -24,131 +24,100 @@
         </div>
     </div>
 </div>
-<div *ngIf="this.showResult">
-    <!-- <div *ngFor="let projectMethod of this.projectMethods; let i = index">
-            <p>{{i+1}}. {{projectMethod.project_name}} - {{projectMethod.value}}</p>
-        </div> -->
-    <!-- <div class="podium">
-            <div class="place gold" style="height: 100%">
-                <h1>1st</h1>
-                <p>{{projectMethods[0].project_name}}</p>
-            </div>
-            <div class="place silver" style="height: {{(100/projectMethods[0].value)*this.projectMethods[1].value}}%">
-                <h1>2nd</h1>
-                <p>{{projectMethods[1].project_name}}</p>
-            </div>
-            <div class="place bronze" style="height: {{(100/projectMethods[0].value)*this.projectMethods[2].value}}%">
-                <h1>3rd</h1>
-                <p>{{projectMethods[2].project_name}}</p>
-            </div>
-            <div class="place participant" style="height: {{(100/projectMethods[0].value)*this.projectMethods[3].value}}%">
-                <h1>4th</h1>
-                    <p>{{projectMethods[3].project_name}}</p>
-            </div>
-            <div class="place participant" style="height: {{(100/projectMethods[0].value)*this.projectMethods[4].value}}%">
-                <h1>5th</h1>
-                <p>{{projectMethods[4].project_name}}</p>
-            </div>
-        </div> -->
-    <div stlye="width: 50px">
-        <p-panel [toggleable]="true" [collapsed]="true">
-            <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">1st
-                    <b>{{projectMethods[0].project_name}}</b> - {{projectMethods[0].value}}</span></ng-template>
-            projectMethods[0].disc
-            <h1>
-                Vorteile
-            </h1>
-            <p>1. Feste zeitliche Abläufe mit eindeutigen Zuständigkeiten sind etabliert</p>
-            <p>2. Die Zeit und das Budget werden am Anfang in der Planung gewissenhaft eingeschätzt</p>
-            <p>3. Eine zuverlässig, systematisch und umfangreich dokumentierte Planung</p>
-            <p>4. Wenn alle Anforderungen da sind und keine Änderungen erwartet werden, dann wird die Entwicklung
-                einfacher</p>
-            <p>5. Das Modell kann leicht aufgrund seiner Linearität eingesetzt werden</p>
-            <p>6. Das Modell wird für viele Projekte eingesetzt und die Stuktur ist somit bekannt</p>
-            <h1>
-                Nachteile
-            </h1>
-            <p>1. Gefahr einer falschen Planung durch die steigende Komplexität in den Forderungen von z.B.: Kunden</p>
-            <p>2. Es ist nicht immer möglich alle Anforderungen direkt am Anfang in der Planungsphase zu definieren</p>
-            <p>3. Eine Fehlerbehandlung mitten im Projekt ist meistens sehr Kostenintensiv</p>
-            <p>4. Aufgrund der Bedeutsamkeit der Planunsphase wird sehr viele Zeit in diese Phase investiert</p>
-            <p>5. Wechselnde Kundenanfoderungen mitten im Projekt können meistens nicht beachtet werden</p>
-            <p>6. Das Absegnen von organisatorischen Angelegenheiten in den einzelnen Phasen führt zu erhöhten Aufwand
-                und zu hohen Ausgaben</p>
-            <p>7. Probleme werden in die nächste Phase verschoben, damit der zeitliche Plan eingehalten wird</p>
-            <p>8. Kundenfeedback wird erst am Ende des Projekts eingeholt</p>
-            <p>9. Eine fertige Software wird nur am Ende des Projekts bereitgestellt ohne vorherige Prototypen</p>
-        </p-panel>
-        <p-panel [toggleable]="true" [collapsed]="true">
-            <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">2st
-                    <b>{{projectMethods[1].project_name}}</b> - {{projectMethods[1].value}}</span></ng-template>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                id est laborum.
-            </p>
-        </p-panel>
-        <p-panel [toggleable]="true" [collapsed]="true">
-            <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">3st
-                    <b>{{projectMethods[2].project_name}}</b> - {{projectMethods[2].value}}</span></ng-template>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                id est laborum.
-            </p>
-        </p-panel>
-        <p-panel [toggleable]="true" [collapsed]="true">
-            <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">4st
-                    <b>{{projectMethods[3].project_name}}</b> - {{projectMethods[3].value}}</span></ng-template>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                id est laborum.
-            </p>
-        </p-panel>
-        <p-panel [toggleable]="true" [collapsed]="true">
-            <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">5st
-                    <b>{{projectMethods[4].project_name}}</b> - {{projectMethods[4].value}}</span></ng-template>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                id est laborum.
-            </p>
-        </p-panel>
-    </div>
-
+<div *ngIf="this.showResult" class="custom-container">
+    <p-panel [toggleable]="true" [collapsed]="true">
+        <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">1st
+                <b>{{projectMethods[0].project_name}}</b> - {{projectMethods[0].value}}</span></ng-template>
+        <h1>
+            Vorteile
+        </h1>
+        <p>1. Feste zeitliche Abläufe mit eindeutigen Zuständigkeiten sind etabliert</p>
+        <p>2. Die Zeit und das Budget werden am Anfang in der Planung gewissenhaft eingeschätzt</p>
+        <p>3. Eine zuverlässig, systematisch und umfangreich dokumentierte Planung</p>
+        <p>4. Wenn alle Anforderungen da sind und keine Änderungen erwartet werden, dann wird die Entwicklung
+            einfacher</p>
+        <p>5. Das Modell kann leicht aufgrund seiner Linearität eingesetzt werden</p>
+        <p>6. Das Modell wird für viele Projekte eingesetzt und die Stuktur ist somit bekannt</p>
+        <h1>
+            Nachteile
+        </h1>
+        <p>1. Gefahr einer falschen Planung durch die steigende Komplexität in den Forderungen von z.B.: Kunden</p>
+        <p>2. Es ist nicht immer möglich alle Anforderungen direkt am Anfang in der Planungsphase zu definieren</p>
+        <p>3. Eine Fehlerbehandlung mitten im Projekt ist meistens sehr Kostenintensiv</p>
+        <p>4. Aufgrund der Bedeutsamkeit der Planunsphase wird sehr viele Zeit in diese Phase investiert</p>
+        <p>5. Wechselnde Kundenanfoderungen mitten im Projekt können meistens nicht beachtet werden</p>
+        <p>6. Das Absegnen von organisatorischen Angelegenheiten in den einzelnen Phasen führt zu erhöhten Aufwand
+            und zu hohen Ausgaben</p>
+        <p>7. Probleme werden in die nächste Phase verschoben, damit der zeitliche Plan eingehalten wird</p>
+        <p>8. Kundenfeedback wird erst am Ende des Projekts eingeholt</p>
+        <p>9. Eine fertige Software wird nur am Ende des Projekts bereitgestellt ohne vorherige Prototypen</p>
+    </p-panel>
+    <p-panel [toggleable]="true" [collapsed]="true">
+        <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">2st
+                <b>{{projectMethods[1].project_name}}</b> - {{projectMethods[1].value}}</span></ng-template>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+            id est laborum.
+        </p>
+    </p-panel>
+    <p-panel [toggleable]="true" [collapsed]="true">
+        <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">3st
+                <b>{{projectMethods[2].project_name}}</b> - {{projectMethods[2].value}}</span></ng-template>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+            id est laborum.
+        </p>
+    </p-panel>
+    <p-panel [toggleable]="true" [collapsed]="true">
+        <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">4st
+                <b>{{projectMethods[3].project_name}}</b> - {{projectMethods[3].value}}</span></ng-template>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+            id est laborum.
+        </p>
+    </p-panel>
+    <p-panel [toggleable]="true" [collapsed]="true">
+        <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">5st
+                <b>{{projectMethods[4].project_name}}</b> - {{projectMethods[4].value}}</span></ng-template>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+            id est laborum.
+        </p>
+    </p-panel>
+    <p-card [style]="{ width: '900px'}" style="text-align: center;" >
+        <h1>
+            Questions
+        </h1>
+        <div *ngFor="let questionBlock of questions">
+            <div *ngIf="questionBlock.id < questionCounter+2">
+                <div *ngFor="let answer of questionBlock.answers">
+                    <div *ngIf="answer.checked">
+                        <p class="title">{{questionBlock.question}}</p>
+                        <p class="answer.label"><p-tag severity="info" value="{{answer.answer}}"></p-tag></p>
+                        <div *ngFor="let test of getHighestProjectMethodOnGivenAnswer(answer); let i = index" style="display: inline">
+                            <p-tag severity="{{test.color}}" value="{{test.method}}" class="projectMethod-tags"></p-tag>
+                        </div>
+                        <div class="suggestion-block"></div>
+                        <p-divider></p-divider>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </p-card>
 </div>
-<!-- <div class="podium">
-    <div class="place gold" id="p1">
-        <h1>1st</h1>
-        <p>{{projectMethods[0].project_name}}</p>
-    </div>
-    <div class="place silver" id="p2">
-        <h1>2nd</h1>
-        <p>{{projectMethods[1].project_name}}</p>
-    </div>
-    <div class="place bronze" id="p3">
-        <h1>3rd</h1>
-        <p>{{projectMethods[2].project_name}}</p>
-    </div>
-    <div class="place participant" id="p4">
-        <h1>4th</h1>
-            <p>{{projectMethods[3].project_name}}</p>
-    </div>
-    <div class="place participant" id="p5">
-        <h1>5th</h1>
-        <p>{{projectMethods[4].project_name}}</p>
-    </div>
-</div> -->
