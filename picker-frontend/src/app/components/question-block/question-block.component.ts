@@ -69,19 +69,12 @@ export class QuestionBlockComponent {
     }
   }
 
-  getStatusOfAllProjectMethods() {
-    for (let i = 0; i < this.projectMethods.length; i++) {
-      console.log(this.projectMethods[i].project_name + ": " + this.projectMethods[i].value)
-    }
-  }
-
   getCurrentQuestion() {
     return this.questions[this.questionCounter];
   }
 
   sortProjectMethods() {
     this.projectMethods.sort((a, b) => (a.value > b.value) ? -1 : 1)
-    this.getStatusOfAllProjectMethods();
   }
 
   nextQuestion() {
@@ -93,7 +86,7 @@ export class QuestionBlockComponent {
       }
       counter++;
     }
-    if ( this.questionCounter+1 === 10){
+    if ( this.questionCounter+1 === 10 && this.checkPointDifferenceBetweenProjectMethods()){
       this.confirmationService.confirm({
         message: 'We already have enough data to give you a recommendation. Do you want to continue to have a better recommendation?',
         header: 'Confirmation',
@@ -103,7 +96,6 @@ export class QuestionBlockComponent {
           this.questionCounter++;
         },
         reject: () => {
-          this.sortProjectMethods()
           this.showResult = true;
         }
     });
@@ -114,6 +106,15 @@ export class QuestionBlockComponent {
       }
       this.selectedAnswers.length = 0;
       this.questionCounter++;
+    }
+  }
+
+  checkPointDifferenceBetweenProjectMethods() {
+    const sortedArr = this.projectMethods.sort((a, b) => b.value - a.value);
+    if(sortedArr[0].value - sortedArr[1].value > 10){
+      return true;
+    }else{
+      return false;
     }
   }
 
