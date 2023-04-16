@@ -310,13 +310,13 @@
                 "answer": "Yes",
                 "checked": false,
                 "info": "The project has very complex tasks that require a lot of expertise and a high level of effort.",
-                "weights": [3,5,5,4,5]
+                "weights": [4,4,5,4,5]
             },
             {
                 "answer": "No",
                 "checked": false,
                 "info": "The tasks and requirements of the project are kept low and simple.",
-                "weights": [5,4,5,5,5]
+                "weights": [4,4,4,5,5]
             }
         ]
     },
