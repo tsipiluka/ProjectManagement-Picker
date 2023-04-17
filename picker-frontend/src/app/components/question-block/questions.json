@@ -328,14 +328,14 @@
             {
                 "answer": "Yes",
                 "checked": false,
-                "info": "The project involves many stakeholders with different interests and requirements (<10).",
-                "weights": [2,2,1,4,4]
+                "info": "The project involves many stakeholders with different interests and requirements (>10).",
+                "weights": [3,3,4,3,2]
             },
             {
                 "answer": "No",
                 "checked": false,
-                "info": "The project only involves a few stakeholders (>10).",
-                "weights": [3,3,4,3,2]
+                "info": "The project only involves a few stakeholders (<10).",
+                "weights": [2,2,1,4,4]
             }
         ]
     },
