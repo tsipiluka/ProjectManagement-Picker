@@ -275,7 +275,7 @@
                 "weights": [5,5,5,3,0]
             },
             {
-                "answer": "Medium",
+                "answer": "Short",
                 "checked": false,
                 "info": "Only a short planning phase is needed (the focus is on getting started faster).",
                 "weights": [0,0,0,4,5]
