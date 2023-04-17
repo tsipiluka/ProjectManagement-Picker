@@ -77,6 +77,12 @@ export class QuestionBlockComponent {
     this.projectMethods.sort((a, b) => (a.value > b.value) ? -1 : 1)
   }
 
+  getStatusOfAllProjectMethods() {
+    for (let i = 0; i < this.projectMethods.length; i++) {
+      console.log(this.projectMethods[i].project_name + ": " + this.projectMethods[i].value)
+    }
+  }
+
   nextQuestion() {
     let counter = 0;
     for (let answer of this.getCurrentQuestion().answers ){
@@ -86,7 +92,8 @@ export class QuestionBlockComponent {
       }
       counter++;
     }
-    if ( this.questionCounter+1 === 10 && this.checkPointDifferenceBetweenProjectMethods()){
+    this.getStatusOfAllProjectMethods()
+    if ( this.questionCounter+1 === 10){
       this.confirmationService.confirm({
         message: 'We already have enough data to give you a recommendation. Do you want to continue to have a better recommendation?',
         header: 'Confirmation',
@@ -109,14 +116,14 @@ export class QuestionBlockComponent {
     }
   }
 
-  checkPointDifferenceBetweenProjectMethods() {
-    const sortedArr = this.projectMethods.sort((a, b) => b.value - a.value);
-    if(sortedArr[0].value - sortedArr[1].value > 10){
-      return true;
-    }else{
-      return false;
-    }
-  }
+  // checkPointDifferenceBetweenProjectMethods() {
+  //   const sortedArr = this.projectMethods.sort((a, b) => b.value - a.value);
+  //   if(sortedArr[0].value - sortedArr[1].value > 10){
+  //     return true;
+  //   }else{
+  //     return false;
+  //   }
+  // }
 
   changeBoolState(selectedAnswer: IAnswer) {
     if(!(selectedAnswer.answer in this.selectedAnswers)){
