@@ -8,13 +8,13 @@
                 "answer": "Yes",
                 "checked": false,
                 "info": "Changes to the product are allowed during the project, which allows for flexibility and adaptation to changing circumstances.",
-                "weights": [0,0,4,5,5]
+                "weights": [0,0,8,10,10]
             },
             {
                 "answer": "No",
                 "checked": false,
                 "info": "Changes to the product are not allowed during the project, which provide a more controlled approach to product development and requires a more detailed planning.",
-                "weights": [5,5,3,0,0]
+                "weights": [10,10,6,0,0]
             }
         ]
     },
@@ -52,13 +52,13 @@
                 "answer": "Yes",
                 "checked": false,
                 "info": "The project should be able to adapt to changing circumstances to be more efficient in finding e.g. new innovative solutions to problems or fullfill new requirements.",
-                "weights": [0,0,4,5,5]
+                "weights": [0,0,8,10,10]
             },
             {
                 "answer": "No",
                 "checked": false,
                 "info": "The project should have a clear goal with a predefined scope and structur and should not be changed during the project.",
-                "weights": [5,5,3,1,0]
+                "weights": [10,10,6,2,0]
             }
         ]
     },
@@ -247,19 +247,19 @@
                 "answer": "High",
                 "checked": false,
                 "info": "Detailed documentation of the project is necessary.",
-                "weights": [5,5,5,1,1]
+                "weights": [10,10,10,2,2]
             },
             {
                 "answer": "Medium",
                 "checked": false,
                 "info": "The most important information of the project must be documented, although some details may be omitted.",
-                "weights": [3,3,4,5,5]
+                "weights": [6,6,8,10,10]
             },
             {
                 "answer": "Low",
                 "checked": false,
                 "info": "Only a basic documentation of the project is needed.",
-                "weights": [0,0,0,3,2]
+                "weights": [0,0,0,6,4]
             }
         ]
     },
@@ -373,13 +373,13 @@
                 "answer": "Yes",
                 "checked": false,
                 "info": "A process for risk mitigation should be established and is crucial to reduce the likelihood and impact of potential problems to reach the goals.",
-                "weights": [0,1,5,2,2]
+                "weights": [0,2,10,4,4]
             },
             {
                 "answer": "No",
                 "checked": false,
                 "info": "There are other important elements such as planning, execution, and team collaboration that also contribute significantly to project success.",
-                "weights": [4,4,1,4,4]
+                "weights": [8,8,2,8,8]
             }
         ]
     },
