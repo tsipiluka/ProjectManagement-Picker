@@ -8,13 +8,13 @@
                 "answer": "Yes",
                 "checked": false,
                 "info": "Changes to the product are allowed during the project, which allows for flexibility and adaptation to changing circumstances.",
-                "weights": [0,0,3,5,5]
+                "weights": [0,0,4,5,5]
             },
             {
                 "answer": "No",
                 "checked": false,
                 "info": "Changes to the product are not allowed during the project, which provide a more controlled approach to product development and requires a more detailed planning.",
-                "weights": [5,5,4,0,0]
+                "weights": [5,5,3,0,0]
             }
         ]
     },
@@ -52,13 +52,13 @@
                 "answer": "Yes",
                 "checked": false,
                 "info": "The project should be able to adapt to changing circumstances to be more efficient in finding e.g. new innovative solutions to problems or fullfill new requirements.",
-                "weights": [0,0,3,5,5]
+                "weights": [0,0,4,5,5]
             },
             {
                 "answer": "No",
                 "checked": false,
                 "info": "The project should have a clear goal with a predefined scope and structur and should not be changed during the project.",
-                "weights": [5,5,4,1,0]
+                "weights": [5,5,3,1,0]
             }
         ]
     },
@@ -272,7 +272,7 @@
                 "answer": "Long",
                 "checked": false,
                 "info": "Detailed planning in advance is foreseen and planning may take place over a longer period of time (several weeks).",
-                "weights": [5,5,4,3,0]
+                "weights": [5,5,5,3,0]
             },
             {
                 "answer": "Medium",
