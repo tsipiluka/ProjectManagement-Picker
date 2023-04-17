@@ -71,7 +71,7 @@
                 "answer": "Yes",
                 "checked": false,
                 "info": "There are clear goals and a specific vision of the project’s outcome which can be used to create a detailed plan.",
-                "weights": [5,5,4,5,5]
+                "weights": [5,5,5,3,3]
             },
             {
                 "answer": "No",
@@ -348,13 +348,13 @@
                 "answer": "Yes",
                 "checked": false,
                 "info": "There are risks that can put the project goals in danger.",
-                "weights": [0,1,5,4,4]
+                "weights": [0,1,5,3,3]
             },
             {
                 "answer": "Medium",
                 "checked": false,
                 "info": "The Risks don’t affect the project goals directly, but can cause difficulties such as delays.",
-                "weights": [1,2,5,5,5]
+                "weights": [1,2,5,4,4]
             },
             {
                 "answer": "No",
@@ -373,7 +373,7 @@
                 "answer": "Yes",
                 "checked": false,
                 "info": "A process for risk mitigation should be established and is crucial to reduce the likelihood and impact of potential problems to reach the goals.",
-                "weights": [0,1,5,4,4]
+                "weights": [0,1,5,2,2]
             },
             {
                 "answer": "No",
