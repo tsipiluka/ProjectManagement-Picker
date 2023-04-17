@@ -134,7 +134,7 @@
                 "answer": "Yes",
                 "checked": false,
                 "info": "Quality assurance should be performed continuously to ensure high quality.",
-                "weights": [2,5,5,4,4]
+                "weights": [1,5,5,4,4]
             },
             {
                 "answer": "No",
