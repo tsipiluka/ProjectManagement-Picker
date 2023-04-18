@@ -3,6 +3,7 @@
         "id": 1,
         "question": "Should changes to the product be possible during the project?",
         "questiontype": "yesno",
+        "relevance":1,
         "answers": [
             {
                 "answer": "Yes",
@@ -22,6 +23,7 @@
         "id": 2,
         "question": "Does the project require a high involvement of the customer?",
         "questiontype": "choose",
+        "relevance":0,
         "answers": [
             {
                 "answer": "High Involvement",
@@ -47,6 +49,7 @@
         "id": 3,
         "question": "Is flexibility important to you?",
         "questiontype": "yesno",
+        "relevance":1,
         "answers": [
             {
                 "answer": "Yes",
@@ -66,6 +69,7 @@
         "id": 4,
         "question": "Do you have a precise vision of the project’s goals?",
         "questiontype": "yesno",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Yes",
@@ -85,6 +89,7 @@
         "id": 5,
         "question": "Should the method focus on minimizing costs and ressources?",
         "questiontype": "yesno",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Yes",
@@ -104,6 +109,7 @@
         "id": 6,
         "question": "Should the required resources and budget be known before the project starts?",
         "questiontype": "choose",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Yes",
@@ -129,6 +135,7 @@
         "id": 7,
         "question": "Is quality assurance an important factor of the project?",
         "questiontype": "yesno",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Yes",
@@ -148,6 +155,7 @@
         "id": 8,
         "question": "Does the project has a fixed deadline?",
         "questiontype": "yesno",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Yes",
@@ -167,6 +175,7 @@
         "id": 9,
         "question": "When should your product (or prototypes) be delivered?",
         "questiontype": "yesno",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Once at the Ende",
@@ -186,6 +195,7 @@
         "id": 10,
         "question": "How many persons are working on the project?",
         "questiontype": "number",
+        "relevance":0,
         "answers": [
             {
                 "answer": "0 - 5",
@@ -217,6 +227,7 @@
         "id": 11,
         "question": "How important is communication within the project?",
         "questiontype": "choose",
+        "relevance":0,
         "answers": [
             {
                 "answer": "High",
@@ -242,6 +253,7 @@
         "id": 12,
         "question": "How important is documentation within the project?",
         "questiontype": "choose",
+        "relevance":1,
         "answers": [
             {
                 "answer": "High",
@@ -267,6 +279,7 @@
         "id": 13,
         "question": "How long should the planning phase of the project be?",
         "questiontype": "yesno",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Long",
@@ -286,6 +299,7 @@
         "id": 14,
         "question": "Should the project management method specify processes and roles or just provide a general guideline?",
         "questiontype": "yesno",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Predefined",
@@ -305,6 +319,7 @@
         "id": 15,
         "question": "Does the project involve a high level of technical complexity?",
         "questiontype": "yesno",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Yes",
@@ -324,6 +339,7 @@
         "id": 16,
         "question": "Are many stakeholders involved in your project?",
         "questiontype": "yesno",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Yes",
@@ -343,6 +359,7 @@
         "id": 17,
         "question": "Is the project exposed to high risks?",
         "questiontype": "choose",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Yes",
@@ -368,6 +385,7 @@
         "id": 18,
         "question": "Is the project’s success heavily dependent on risk management and mitigation?",
         "questiontype": "yesno",
+        "relevance":1,
         "answers": [
             {
                 "answer": "Yes",
@@ -387,6 +405,7 @@
         "id": 19,
         "question": "Does your Team cover a wide range of expertise for the development?",
         "questiontype": "yesno",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Yes",
@@ -406,6 +425,7 @@
         "id": 20,
         "question": "Is this a long-term project?",
         "questiontype": "yesno",
+        "relevance":0,
         "answers": [
             {
                 "answer": "Yes",

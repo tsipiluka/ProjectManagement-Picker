@@ -4,6 +4,7 @@ export interface IQuestion {
     id: number,
     question: string,
     questiontype: string,
+    relevance: number,
     answers: IAnswer[]
 }
 
@@ -12,6 +13,7 @@ export class Question implements IQuestion {
         public id: number,
         public question: string,
         public questiontype: string,
+        public relevance: number,
         public answers: IAnswer[]
     ) { }
 }

@@ -110,7 +110,7 @@
                     <div *ngIf="answer.checked">
                         <p class="title">{{questionBlock.question}}</p>
                         <p class="answer.label"><p-tag severity="info" value="{{answer.answer}}"></p-tag></p>
-                        <div *ngFor="let test of getHighestProjectMethodOnGivenAnswer(answer); let i = index" style="display: inline">
+                        <div *ngFor="let test of getHighestProjectMethodOnGivenAnswer(answer, questionBlock); let i = index" style="display: inline">
                             <p-tag severity="{{test.color}}" value="{{test.method}}" class="projectMethod-tags"></p-tag>
                         </div>
                         <div class="suggestion-block"></div>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IQuestion, Question } from '../../entities/question';
 import QuestionJson from './questions.json';
-import { IAnswer, Answer, IAnswerObject } from 'src/app/entities/answer';
+import { IAnswer, Answer } from 'src/app/entities/answer';
 import { ProjectMethod } from 'src/app/entities/projectMethod';
 import { ConfirmationService } from 'primeng/api';
 
@@ -26,7 +26,7 @@ export class QuestionBlockComponent {
   questions: Question[] = [];
   projectMethods: ProjectMethod[] = [];
   projectMethodNames: string[] = ["Waterfall", "V-Model", "Spiral Model", "Kanban", "Scrum"];
-  questionCounter: number = 0;
+  questionCounter: number = 0; 
 
   selectedAnswers: string[] = [];
 
@@ -54,7 +54,7 @@ export class QuestionBlockComponent {
           }
           answers.push(new Answer(QuestionJson[i].answers![j].answer, QuestionJson[i].answers![j].checked, QuestionJson[i].answers![j].info, weights))
         }
-        this.questions.push(new Question(QuestionJson[i].id!, QuestionJson[i].question!, QuestionJson[i].questiontype!, answers));
+        this.questions.push(new Question(QuestionJson[i].id!, QuestionJson[i].question!, QuestionJson[i].questiontype!, QuestionJson[i].relevance!,  answers));
       }
     }
   }
@@ -93,27 +93,13 @@ export class QuestionBlockComponent {
       counter++;
     }
     this.getStatusOfAllProjectMethods()
-    if ( this.questionCounter+1 === 10){
-      this.confirmationService.confirm({
-        message: 'We already have enough data to give you a recommendation. Do you want to continue to have a better recommendation?',
-        header: 'Confirmation',
-        icon: 'pi pi-exclamation-circle',
-        accept: () => {
-          this.selectedAnswers.length = 0;
-          this.questionCounter++;
-        },
-        reject: () => {
-          this.showResult = true;
-        }
-    });
-    }else{
-      if ( this.questionCounter+1 === 20){
-        this.sortProjectMethods()
-        this.showResult = true;
-      }
-      this.selectedAnswers.length = 0;
-      this.questionCounter++;
+
+    if ( this.questionCounter+1 === 20){
+      this.sortProjectMethods()
+      this.showResult = true;
     }
+    this.selectedAnswers.length = 0;
+    this.questionCounter++;
   }
 
   // checkPointDifferenceBetweenProjectMethods() {
@@ -132,10 +118,14 @@ export class QuestionBlockComponent {
     }
   }
 
-  getHighestProjectMethodOnGivenAnswer(answer: IAnswer) {
+  getHighestProjectMethodOnGivenAnswer(answer: IAnswer, question: IQuestion) {
     let highestProjectMethod: IColorizeAnswer[] = []
     for (let i = 0; i < this.projectMethodNames.length; i++) {
-      highestProjectMethod.push(new ColorizeAnswer(this.projectMethodNames[i], this.setCorrectColor(answer.weights.get(i)!)!));
+      if(question.relevance === 1){
+        highestProjectMethod.push(new ColorizeAnswer(this.projectMethodNames[i], this.setCorrectColor(answer.weights.get(i)!/ 2)!));
+      }else{
+        highestProjectMethod.push(new ColorizeAnswer(this.projectMethodNames[i], this.setCorrectColor(answer.weights.get(i)!)!));
+      }
     }
 
     highestProjectMethod.sort((a, b) => {
