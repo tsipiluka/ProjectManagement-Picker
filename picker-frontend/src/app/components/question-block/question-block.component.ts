@@ -79,11 +79,11 @@ export class QuestionBlockComponent {
     this.projectMethods.sort((a, b) => (a.value > b.value) ? -1 : 1)
   }
 
-  getStatusOfAllProjectMethods() {
-    for (let i = 0; i < this.projectMethods.length; i++) {
-      console.log(this.projectMethods[i].project_name + ": " + this.projectMethods[i].value)
-    }
-  }
+  // getStatusOfAllProjectMethods() {
+  //   for (let i = 0; i < this.projectMethods.length; i++) {
+  //     console.log(this.projectMethods[i].project_name + ": " + this.projectMethods[i].value)
+  //   }
+  // }
 
   nextQuestion() {
     let counter = 0;
@@ -94,7 +94,6 @@ export class QuestionBlockComponent {
       }
       counter++;
     }
-    this.getStatusOfAllProjectMethods()
     if ( this.questionCounter+1 === 20){
       this.sortProjectMethods()
       let largeValue = this.projectMethods[0].value
