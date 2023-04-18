@@ -27,6 +27,7 @@ export class QuestionBlockComponent {
   questions: Question[] = [];
   projectMethods: ProjectMethod[] = [];
   projectMethodNames: string[] = ["Waterfall", "V-Model", "Spiral Model", "Kanban", "Scrum"];
+  projectMethodPaths: string[] = ["waterfall", "v-model", "spiral-model", "kanban", "scrum"];
   questionCounter: number = 0; 
 
   selectedAnswers: string[] = [];
@@ -40,7 +41,7 @@ export class QuestionBlockComponent {
 
   initializeProjectMethods() {
     for (let i = 0; i < this.projectMethodNames.length; i++) {
-      this.projectMethods.push(new ProjectMethod(i, this.projectMethodNames[i], 0, ''));
+      this.projectMethods.push(new ProjectMethod(i, this.projectMethodNames[i], 0, '', "https://project-picker.wh0cares.live/" +this.projectMethodPaths[i]));
     }
   }
 
