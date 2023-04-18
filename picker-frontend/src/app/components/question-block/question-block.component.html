@@ -27,78 +27,39 @@
 <div *ngIf="this.showResult" class="custom-container">
     <p-panel [toggleable]="true" [collapsed]="true">
         <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">1st
-                <b>{{projectMethods[0].project_name}}</b> - {{projectMethods[0].value}}</span></ng-template>
-        <h1>
-            Vorteile
-        </h1>
-        <p>1. Feste zeitliche Abläufe mit eindeutigen Zuständigkeiten sind etabliert</p>
-        <p>2. Die Zeit und das Budget werden am Anfang in der Planung gewissenhaft eingeschätzt</p>
-        <p>3. Eine zuverlässig, systematisch und umfangreich dokumentierte Planung</p>
-        <p>4. Wenn alle Anforderungen da sind und keine Änderungen erwartet werden, dann wird die Entwicklung
-            einfacher</p>
-        <p>5. Das Modell kann leicht aufgrund seiner Linearität eingesetzt werden</p>
-        <p>6. Das Modell wird für viele Projekte eingesetzt und die Stuktur ist somit bekannt</p>
-        <h1>
-            Nachteile
-        </h1>
-        <p>1. Gefahr einer falschen Planung durch die steigende Komplexität in den Forderungen von z.B.: Kunden</p>
-        <p>2. Es ist nicht immer möglich alle Anforderungen direkt am Anfang in der Planungsphase zu definieren</p>
-        <p>3. Eine Fehlerbehandlung mitten im Projekt ist meistens sehr Kostenintensiv</p>
-        <p>4. Aufgrund der Bedeutsamkeit der Planunsphase wird sehr viele Zeit in diese Phase investiert</p>
-        <p>5. Wechselnde Kundenanfoderungen mitten im Projekt können meistens nicht beachtet werden</p>
-        <p>6. Das Absegnen von organisatorischen Angelegenheiten in den einzelnen Phasen führt zu erhöhten Aufwand
-            und zu hohen Ausgaben</p>
-        <p>7. Probleme werden in die nächste Phase verschoben, damit der zeitliche Plan eingehalten wird</p>
-        <p>8. Kundenfeedback wird erst am Ende des Projekts eingeholt</p>
-        <p>9. Eine fertige Software wird nur am Ende des Projekts bereitgestellt ohne vorherige Prototypen</p>
+            <b>{{projectMethods[0].project_name}}</b> - {{projectMethods[0].value}}</span>
+        </ng-template>
+        <p>
+            {{projectMethods[0].rec}}
+        </p>
     </p-panel>
     <p-panel [toggleable]="true" [collapsed]="true">
         <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">2st
                 <b>{{projectMethods[1].project_name}}</b> - {{projectMethods[1].value}}</span></ng-template>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-            id est laborum.
-        </p>
+                <p>
+                    {{projectMethods[1].rec}}
+                </p>
     </p-panel>
     <p-panel [toggleable]="true" [collapsed]="true">
         <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">3st
                 <b>{{projectMethods[2].project_name}}</b> - {{projectMethods[2].value}}</span></ng-template>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-            id est laborum.
-        </p>
+                <p>
+                    {{projectMethods[2].rec}}
+                </p>
     </p-panel>
     <p-panel [toggleable]="true" [collapsed]="true">
         <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">4st
                 <b>{{projectMethods[3].project_name}}</b> - {{projectMethods[3].value}}</span></ng-template>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-            id est laborum.
-        </p>
+                <p>
+                    {{projectMethods[3].rec}}
+                </p>
     </p-panel>
     <p-panel [toggleable]="true" [collapsed]="true">
         <ng-template pTemplate="header"> <span class="text-primary font-semibold text-xl">5st
                 <b>{{projectMethods[4].project_name}}</b> - {{projectMethods[4].value}}</span></ng-template>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-            id est laborum.
-        </p>
+                <p>
+                    {{projectMethods[4].rec}}
+                </p>
     </p-panel>
     <p-card [style]="{ width: '900px'}" style="text-align: center;" >
         <h1>

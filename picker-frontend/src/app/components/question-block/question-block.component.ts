@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IQuestion, Question } from '../../entities/question';
 import QuestionJson from './questions.json';
+import RecommsJson from './recomms.json';
 import { IAnswer, Answer } from 'src/app/entities/answer';
-import { ProjectMethod } from 'src/app/entities/projectMethod';
+import { IProjectMethod, ProjectMethod } from 'src/app/entities/projectMethod';
 import { ConfirmationService } from 'primeng/api';
 
 export interface IColorizeAnswer {
@@ -39,7 +40,7 @@ export class QuestionBlockComponent {
 
   initializeProjectMethods() {
     for (let i = 0; i < this.projectMethodNames.length; i++) {
-      this.projectMethods.push(new ProjectMethod(i, this.projectMethodNames[i], 0));
+      this.projectMethods.push(new ProjectMethod(i, this.projectMethodNames[i], 0, ''));
     }
   }
 
@@ -93,23 +94,29 @@ export class QuestionBlockComponent {
       counter++;
     }
     this.getStatusOfAllProjectMethods()
-
     if ( this.questionCounter+1 === 20){
       this.sortProjectMethods()
+      let largeValue = this.projectMethods[0].value
+      this.projectMethods[0].rec = this.getCorrectRecommondation(this.projectMethods[0].id, 100);
+      this.projectMethods[1].rec = this.getCorrectRecommondation(this.projectMethods[1].id, (100 / largeValue) * this.projectMethods[1].value);
+      this.projectMethods[2].rec = this.getCorrectRecommondation(this.projectMethods[2].id, (100 / largeValue) * this.projectMethods[2].value);
+      this.projectMethods[3].rec = this.getCorrectRecommondation(this.projectMethods[3].id, (100 / largeValue) * this.projectMethods[3].value);
+      this.projectMethods[4].rec = this.getCorrectRecommondation(this.projectMethods[4].id, (100 / largeValue) * this.projectMethods[4].value);
       this.showResult = true;
     }
     this.selectedAnswers.length = 0;
     this.questionCounter++;
   }
 
-  // checkPointDifferenceBetweenProjectMethods() {
-  //   const sortedArr = this.projectMethods.sort((a, b) => b.value - a.value);
-  //   if(sortedArr[0].value - sortedArr[1].value > 10){
-  //     return true;
-  //   }else{
-  //     return false;
-  //   }
-  // }
+  getCorrectRecommondation(projectId: number, proc: number) {
+    if( proc > 89){
+      return RecommsJson[projectId].rec
+    }else if ( proc > 69 ){
+      return RecommsJson[projectId].semiRec
+    } else{
+      return RecommsJson[projectId].noRec
+    }   
+  }
 
   changeBoolState(selectedAnswer: IAnswer) {
     if(!(selectedAnswer.answer in this.selectedAnswers)){
