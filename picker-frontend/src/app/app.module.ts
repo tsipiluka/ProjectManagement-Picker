@@ -28,6 +28,7 @@ import { KanbanInfoComponent } from './pages/kanban-info/kanban-info.component';
 import { WaterfallInfoComponent } from './pages/waterfall-info/waterfall-info.component';
 import { VmodelInfoComponent } from './pages/vmodel-info/vmodel-info.component';
 import { SpiralmodelInfoComponent } from './pages/spiralmodel-info/spiralmodel-info.component';
+import { TagModule } from 'primeng/tag';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { SpiralmodelInfoComponent } from './pages/spiralmodel-info/spiralmodel-i
     CheckboxModule,
     ProgressBarModule,
     ConfirmDialogModule,
-    PanelModule
+    PanelModule,
+    TagModule
   ],
   providers: [],
   bootstrap: [AppComponent],

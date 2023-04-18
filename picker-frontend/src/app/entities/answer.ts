@@ -1,7 +1,3 @@
-export interface IAnswerObject {
-    AnswerObject: Map<number, number>
-}
-
 export interface IAnswer {
     answer: string,
     checked: boolean,
